@@ -1,0 +1,46 @@
+#titulo {
+    margin-bottom: 7%;
+}
+
+
+
+#boton-dpto {
+    margin-bottom: 7%;
+    margin-top: 2%;
+
+
+ 
+}
+
+#container-dpto {
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+   
+    max-width: 1500px;
+  margin-bottom: 10%;
+
+}
+
+#titulo-dpto {
+    display: block;
+    justify-content: center;
+
+}
+
+@media (max-width:610px ) {
+    #container-dpto {
+        display: block;
+        justify-content: auto;
+    }
+
+
+    #titulo-dpto {
+        display:block ;
+        width: 100%;
+      
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+}

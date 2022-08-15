@@ -1,0 +1,392 @@
+/* anidamiento */
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
+#texto-index {
+  margin-bottom: 50px;
+}
+
+#titulo {
+  margin-bottom: 7%;
+}
+
+#boton-dpto {
+  margin-bottom: 7%;
+  margin-top: 2%;
+}
+
+#container-dpto {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1500px;
+  margin-bottom: 10%;
+}
+
+#titulo-dpto {
+  display: block;
+  justify-content: center;
+}
+
+@media (max-width: 610px) {
+  #container-dpto {
+    display: block;
+    justify-content: auto;
+  }
+  #titulo-dpto {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__item {
+  position: relative;
+}
+
+.gallery__title {
+  position: absolute;
+  bottom: 0;
+  color: aliceblue;
+  background: linear-gradient(rgba(255, 255, 255, 0), black);
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+}
+
+.gallery__item:nth-child(4) {
+  grid-column-start: span 2;
+}
+
+.gallery__item:nth-child(5) {
+  grid-row-start: span 2;
+}
+
+.gallery__item:nth-child(9) {
+  grid-column-start: span 2;
+}
+
+@media (min-width: 768px) {
+  .gallery-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .gallery__item:nth-child(3) {
+    grid-column-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-column-start: span 3;
+  }
+  .gallery__item:nth-child(5) {
+    grid-row-start: span 3;
+  }
+  .gallery__item:nth-child(9) {
+    grid-column-start: span 3;
+  }
+}
+@media (min-width: 1024px) {
+  .gallery-container {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .gallery__item:nth-child(1) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(2) {
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(3) {
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-row-start: span 2;
+    grid-column-start: span 1;
+  }
+  .gallery__item:nth-child(5) {
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(6) {
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(9) {
+    grid-column-start: span 2;
+  }
+}
+@media (max-width: 380px) {
+  .gallery__item:nth-child(1) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(2) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(3) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(4) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(5) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(6) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(7) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(8) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .gallery__item:nth-child(9) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #303030;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #8a8a8a;
+}
+
+#formulario {
+  border-radius: 5px;
+  background-color: rgb(161, 160, 160);
+  padding: 20px;
+  border: solid 2px black;
+  margin-bottom: 10%;
+  margin-top: 4%;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+#tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.tarjeta {
+  display: inline-flex;
+  justify-content: space-between;
+  position: relative;
+  width: 300px;
+  height: 350px;
+  margin: 20px;
+}
+
+.tarjeta .face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.tarjeta .front {
+  transform: perspective(600px) rotateY(0deg);
+  box-shadow: 0 5 10px #000;
+}
+
+.tarjeta .front .img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tarjeta .front h3 {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: wheat;
+  background-color: rgba(0, 0, 0, 0.634);
+  text-align: center;
+}
+
+.tarjeta .back {
+  transform: perspective(600px) rotateY(180deg);
+  background-color: rgb(3, 35, 54);
+  padding: 15px;
+  color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.tarjeta:hover .front {
+  transform: perspective(600px) rotateY(180deg);
+}
+
+.tarjeta:hover .back {
+  transform: perspective(600px) rotateY(360deg);
+}
+
+body {
+  background: linear-gradient(to right, white, grey);
+  @import url("https://fonts.googleapis.com/css2?family=Koulen&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap");
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Colores */
+/* Fonts */
+#carousel-index {
+  box-shadow: -2px 21px 35px 22px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: -2px 21px 35px 22px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: -2px 21px 35px 22px rgba(0, 0, 0, 0.68);
+  margin-bottom: 40px;
+}
+
+#carrousel-dpto {
+  box-shadow: -2px 21px 35px 22px rgba(0, 0, 0, 0.68);
+  -webkit-box-shadow: -2px 21px 35px 22px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: -2px 21px 35px 22px rgba(0, 0, 0, 0.68);
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */
