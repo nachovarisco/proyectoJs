@@ -175,7 +175,7 @@ swal({
 // esto esta bien (agregar sweet alert)
 
 function calcularPrecio (){
-
+  
  
 
 let cantidadDeHuespedes =registroHuesped[3];
@@ -183,7 +183,18 @@ let nocheEstadia = registroHuesped[4];
  const precio = 2500
  let precioFinal = cantidadDeHuespedes*precio*nocheEstadia;
  console.log (precioFinal);
- alert ("el precio final de su estadia seria de: $"+precioFinal);
+
+ swal({
+  title: " RESERVA:",
+  text: `precio final por: \n ${localStorage.getItem ('noches')}  noches \n ${localStorage.getItem ('personas')}  personas \n  $ARS${localStorage.getItem ('precioFinal')}`
+  ,
+  
+  buttons: true ,
+  dangerMode: true,
+})
+
+
+
 
 
 
@@ -191,13 +202,33 @@ JSON.stringify(localStorage.setItem ('personas', (cantidadDeHuespedes)));
 JSON.stringify(localStorage.setItem ('noches', (nocheEstadia)));
 JSON.stringify(localStorage.setItem ('precioFinal', (precioFinal)));
 
-
-
-
-
 document.getElementById ("precio-f").innerHTML = `<div class="text-center"> precio final por: ${localStorage.getItem ('noches')}  noches y  ${localStorage.getItem ('personas')}  personas, es: $ARS${localStorage.getItem ('precioFinal')}</div>`
 
 
+}
+
+
+
+function reserva () {
+  swal({
+    title: "¿Desea confirmar su reserva?",
+    text: `por ${localStorage.getItem ('noches')}  noches y  ${localStorage.getItem ('personas')}  personas`,
+    icon: "warning",
+    buttons: true,
+    dangerMode: true,
+  })
+  .then((willDelete) => {
+    if (willDelete) {
+      swal("Gracias por su reserva!", {
+        icon: "success",
+      });
+    } else {
+      swal("lo lamentamos");
+    }
+  });
 
 }
+
+//agregar fecha al formulario para seleccionar
+
 
